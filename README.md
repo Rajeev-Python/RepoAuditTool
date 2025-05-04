@@ -56,6 +56,25 @@ python main.py <repository_path> [test_output_dir]
 - `<repository_path>`: The path to the repository you want to audit.
 - `[test_output_dir]`: (Optional) The directory where test stubs will be generated. Defaults to "tests".
 
+## Reports
+
+The audit process generates reports in both HTML and Markdown formats. These reports summarize:
+
+- **Scan Results**: The results of the repository scan.
+- **Forbidden Patterns**: Any forbidden patterns detected in the code.
+- **Outdated Dependencies**: A list of outdated dependencies in the project.
+
+### Report Location
+
+Reports are saved in the `reports` folder, organized by date (`YYYYMMDD`) and timestamp (`YYYYMMDD_HHMMSS`). For example:
+
+```
+reports/
+└── 20250504/
+    ├── report_20250504_143045.html
+    ├── report_20250504_143045.md
+```
+
 ## Requirements
 
 The project requires the following Python packages:
